@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart College Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="dypcoe_logo.png" alt="College Logo">
+
+    <div>
+        <h1>D. Y. Patil College of Engineering</h1>
+        <p>Akurdi, Pune - 411044</p>
+    </div>
+</header>
+
+
+<nav id="mainNav">
+    <a href="#home" data-route="home">Home</a>
+    <a href="#about" data-route="about">About</a>
+    <a href="#faculty" data-route="faculty">Faculty</a>
+    <a href="#products" data-route="products">Products</a>
+    <a href="#cart" data-route="cart">Shopping Cart</a>
+    <a href="#contact" data-route="contact">Contact</a>
+    <a href="#enquiry" data-route="enquiry">Enquiry</a>
+</nav>
+
+
+<section class="hero" data-page="home">
+    <p>WELCOME TO OUR CAMPUS</p>
+    <h2>Smart College Portal</h2>
+    <p>One place for college information and student services.</p>
+
+    <button onclick="welcome()">Explore Portal</button>
+</section>
+
+<section data-page="home">
+    <h2>What We Provide</h2>
+
+    <div class="cards">
+        <div>
+            <h3>Academics</h3>
+            <p>Information about engineering programs and departments.</p>
+        </div>
+
+        <div>
+            <h3>Faculty</h3>
+            <p>View faculty members and their departments.</p>
+        </div>
+
+        <div>
+            <h3>Student Services</h3>
+            <p>Enquiry and useful information for students.</p>
+        </div>
+    </div>
+</section>
+
+<section data-page="home">
+    <h2>Departments</h2>
+
+    <select id="deptSelect" onchange="filterDepartments()">
+        <option value="all">All Departments</option>
+        <option value="computer">Computer Engineering</option>
+        <option value="ai">AI & Data Science</option>
+        <option value="it">Information Technology</option>
+        <option value="mechanical">Mechanical Engineering</option>
+        <option value="civil">Civil Engineering</option>
+        <option value="entc">ENTC Engineering</option>
+    </select>
+
+    <div class="cards">
+
+        <div class="department" data-dept="computer">
+            Computer Engineering
+        </div>
+
+        <div class="department" data-dept="ai">
+            AI & Data Science
+        </div>
+
+        <div class="department" data-dept="it">
+            Information Technology
+        </div>
+
+        <div class="department" data-dept="mechanical">
+            Mechanical Engineering
+        </div>
+
+        <div class="department" data-dept="civil">
+            Civil Engineering
+        </div>
+
+        <div class="department" data-dept="entc">
+            ENTC Engineering
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="products">
+    <h2>College Products</h2>
+
+    <p id="loadingMessage">Loading products...</p>
+    <p id="errorMessage"></p>
+
+    <div id="productList" class="cards"></div>
+</section>
+
+
+
+<section id="cart">
+    <h2>Shopping Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <h3 id="cartTotal">Total: ₹0</h3>
+
+    <button onclick="clearCart()">Clear Cart</button>
+</section>
+
+<!-- About Section - Practical 5 -->
+
+<section class="page" id="about">
+
+    <h2>About Our College</h2>
+
+    <p>
+        D. Y. Patil College of Engineering, Akurdi is an engineering
+        institute located in Pune. The college provides education in
+        different engineering and technology disciplines.
+    </p>
+
+    <p>
+        The Smart College Portal is designed to provide students with
+        useful information about departments, faculty members,
+        facilities and student services.
+    </p>
+
+    <h2>Our Focus</h2>
+
+    <div class="cards">
+
+        <div>
+            <h3>Quality Education</h3>
+            <p>Focus on technical learning and academic development.</p>
+        </div>
+
+        <div>
+            <h3>Innovation</h3>
+            <p>Encouraging students to learn and create new solutions.</p>
+        </div>
+
+        <div>
+            <h3>Student Development</h3>
+            <p>Supporting technical, professional and personal growth.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Faculty Section - Practical 5 -->
+
+<section class="page" id="faculty">
+
+    <h2>Faculty Members</h2>
+
+    <p class="note">
+        Sample faculty information for project demonstration.
+    </p>
+
+    <div class="faculty">
+
+        <div class="faculty-box">
+            <h3>Dr. Rahul Patil</h3>
+            <p>AI & Data Science</p>
+
+            <button onclick="toggleFaculty(this)">
+                View Details
+            </button>
+
+            <p class="details">
+                Faculty member associated with Artificial Intelligence
+                and Data Science subjects.
+            </p>
+        </div>
+
+        <div class="faculty-box">
+            <h3>Prof. Neha Kulkarni</h3>
+            <p>Computer Engineering</p>
+
+            <button onclick="toggleFaculty(this)">
+                View Details
+            </button>
+
+            <p class="details">
+                Faculty member associated with programming and
+                computer engineering subjects.
+            </p>
+        </div>
+
+        <div class="faculty-box">
+            <h3>Prof. Amit Joshi</h3>
+            <p>Information Technology</p>
+
+            <button onclick="toggleFaculty(this)">
+                View Details
+            </button>
+
+            <p class="details">
+                Faculty member interested in web and information
+                technology subjects.
+            </p>
+        </div>
+
+        <div class="faculty-box">
+            <h3>Prof. Snehal Deshmukh</h3>
+            <p>Mechanical Engineering</p>
+
+            <button onclick="toggleFaculty(this)">
+                View Details
+            </button>
+
+            <p class="details">
+                Faculty member associated with mechanical engineering.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact Section - Practical 5 -->
+
+<section class="page" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+
+        <h3>College Address</h3>
+        <p>
+            D. Y. Patil College of Engineering,
+            Akurdi, Pune - 411044
+        </p>
+
+        <h3>Email</h3>
+        <p>info@dypcoeakurdi.ac.in</p>
+
+        <h3>Phone</h3>
+        <p>020-27653054</p>
+
+    </div>
+
+    <h2>Student Events</h2>
+
+    <button onclick="showEvents()">Show Events</button>
+
+    <div id="eventList"></div>
+
+</section>
+
+<!-- Enquiry Section - Practical 5 -->
+
+<section class="page" id="enquiry">
+
+    <h2>Student Enquiry</h2>
+
+    <form id="enquiryForm">
+
+        <label>Student Name</label>
+        <input type="text" id="studentName"
+               placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" id="studentEmail"
+               placeholder="Enter your email" required>
+
+        <label>Select Department</label>
+
+        <select id="course" required>
+            <option value="">Choose Department</option>
+            <option>Computer Engineering</option>
+            <option>AI & Data Science</option>
+            <option>Information Technology</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+        </select>
+
+        <label>Your Enquiry</label>
+
+        <textarea id="message"
+                  placeholder="Write your enquiry here"
+                  required></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Smart College Portal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

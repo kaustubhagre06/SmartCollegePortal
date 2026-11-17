@@ -1,0 +1,51 @@
+
+[
+    {
+        "id": 1,
+        "name": "College Notebook",
+        "category": "Stationery",
+        "price": 80,
+        "description": "High quality college notebook",
+        "image": "https://placehold.co/300x200?text=Notebook"
+    },
+    {
+        "id": 2,
+        "name": "College Bag",
+        "category": "Accessories",
+        "price": 750,
+        "description": "Stylish college backpack",
+        "image": "https://placehold.co/300x200?text=College+Bag"
+    },
+    {
+        "id": 3,
+        "name": "Lab Coat",
+        "category": "Clothing",
+        "price": 450,
+        "description": "White laboratory coat",
+        "image": "https://placehold.co/300x200?text=Lab+Coat"
+    },
+    {
+        "id": 4,
+        "name": "ID Card Holder",
+        "category": "Accessories",
+        "price": 50,
+        "description": "College ID card holder",
+        "image": "https://placehold.co/300x200?text=ID+Card"
+    },
+    {
+        "id": 5,
+        "name": "Pen Set",
+        "category": "Stationery",
+        "price": 100,
+        "description": "Pack of quality pens",
+        "image": "https://placehold.co/300x200?text=Pen+Set"
+    },
+    {
+        "id": 6,
+        "name": "College T-Shirt",
+        "category": "Clothing",
+        "price": 350,
+        "description": "College branded T-shirt",
+        "image": "https://placehold.co/300x200?text=T-Shirt"
+    }
+]

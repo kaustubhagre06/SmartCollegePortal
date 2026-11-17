@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enquiry - Smart College Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="dypcoe_logo.png" alt="College Logo">
+
+    <div>
+        <h1>D. Y. Patil College of Engineering</h1>
+        <p>Akurdi, Pune - 411044</p>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="contact.html">Contact</a>
+    <a href="enquiry.html">Enquiry</a>
+</nav>
+
+<section class="page">
+
+    <h2>Student Enquiry</h2>
+
+    <form id="enquiryForm">
+
+        <label>Student Name</label>
+        <input type="text" id="studentName"
+               placeholder="Enter your name">
+
+        <label>Email</label>
+        <input type="email" id="studentEmail"
+               placeholder="Enter your email">
+
+        <label>Select Department</label>
+
+        <select id="course">
+            <option value="">Choose Department</option>
+            <option>Computer Engineering</option>
+            <option>AI & Data Science</option>
+            <option>Information Technology</option>
+            <option>Mechanical Engineering</option>
+            <option>Civil Engineering</option>
+        </select>
+
+        <label>Your Enquiry</label>
+
+        <textarea id="message"
+                  placeholder="Write your enquiry here"></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Smart College Portal</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
